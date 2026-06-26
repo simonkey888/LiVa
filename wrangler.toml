@@ -1,0 +1,19 @@
+name = "liva"
+main = "dist/worker.mjs"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Worker will be accessible at:
+# https://liva.simondalmasso44.workers.dev
+
+[vars]
+PROJECT_VERSION = "4.1.0-RECONSTRUCTION"
+
+# Secrets (set via `wrangler secret put` or API):
+#   YOUTUBE_API_KEY
+#   TWITCH_CLIENT_ID
+#   TWITCH_CLIENT_SECRET
+
+# Observability
+[observability]
+enabled = true

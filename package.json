@@ -1,0 +1,18 @@
+{
+  "name": "liva",
+  "version": "4.1.0-reconstruction",
+  "private": true,
+  "description": "LiVa — Zero-latency zapping aggregator (Cloudflare Worker)",
+  "author": "Simón Dalmasso",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --format=esm --platform=browser --outfile=dist/worker.mjs --target=es2022",
+    "deploy": "npm run build && wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.0",
+    "wrangler": "^4.0.0"
+  }
+}
